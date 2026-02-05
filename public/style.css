@@ -59,7 +59,7 @@ header {
 }
 
 .card {
-    background: var(--card-bg);
+    /* background: var(--card-bg); */
     border-radius: 8px;
     padding: 20px;
     border: 1px solid var(--border);
