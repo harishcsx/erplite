@@ -17,7 +17,7 @@
 
 body {
     background-color: var(--bg);
-    color: var(--text);
+    /* color: var(--text); */
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -75,7 +75,7 @@ p {
     color: var(--text-dim);
     margin-bottom: 20px;
 }
-
+/* 
 input {
     width: 100%;
     padding: 10px;
@@ -84,9 +84,9 @@ input {
     font-size: 0.9rem;
     margin-bottom: 15px;
     background: white;
-}
+} */
 
-.btn-primary {
+/* .btn-primary {
     width: 100%;
     padding: 12px;
     background: var(--text);
@@ -96,7 +96,7 @@ input {
     font-weight: 600;
     font-size: 0.9rem;
     cursor: pointer;
-}
+} */
 
 .stats-grid {
     display: flex;
