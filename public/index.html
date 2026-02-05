@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniLite | 2G Optimized</title>
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <header>
+            <span class="logo">Uni<span>Lite</span></span>
+            <span class="status-badge" id="network-status">Online</span>
+        </header>
+
+        <main id="main-content">
+            <section id="login-section" class="card">
+                <h2>Portal Connection</h2>
+                <p>Establishing lite link for low-bandwidth access...</p>
+                <form id="login-form">
+                    <input type="text" id="erp-url" value="http://gietuerp.in" placeholder="ERP URL">
+                    <button type="submit" class="btn-primary">Connect</button>
+                </form>
+            </section>
+
+            <section id="dashboard" class="hidden">
+                <!-- <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="label">Attendance</div>
+                        <div class="value" id="val-attendance">--</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="label">GPA</div>
+                        <div class="value" id="val-results">--</div>
+                    </div>
+                </div> -->
+
+                <div class="portal-frame-container">
+                    <iframe id="portal-frame"></iframe>
+                </div>
+            </section>
+        </main>
+
+        <div id="loader" class="hidden">
+            <p>Syncing Lite Data...</p>
+        </div>
+
+        <nav class="bottom-nav hidden" id="app-nav">
+            <button class="nav-item active" onclick="showDashboard()">Home</button>
+            <button class="nav-item" onclick="showStats()">Details</button>
+            <button class="nav-item" style="color:#dc2626" onclick="logout()">Logout</button>
+        </nav>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => navigator.serviceWorker.register('/sw.js'));
+        }
+    </script>
+</body>
+
+</html>

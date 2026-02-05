@@ -1,0 +1,71 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <meta name="keywords" content="Login" />
+    <meta name="description" content="Login" />
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <link href="/Login/css/login.css" rel="stylesheet" />
+    <script src="/Login/js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <form autocomplete="off" action="/" method="post">
+        <div class="login">
+            <div class="login__header">
+                <img src="/Login/images/logo.png" />
+                <p>Best University in Eastern India</p>
+            </div>
+            <div class="login__content">
+                <h1 style="color: #00ced1">Login</h1>
+
+                <div class="form-group mb-3">
+                    <input class="form-control" id="textUser" placeholder="Username" autofocus="autofocus" maxlength="15" type="text" data-val="true" data-val-regex="Enter valid user name." data-val-regex-pattern="^[a-zA-Z0-9]{1,15}$" data-val-required="Please enter user name" name="vchUserName" value="" />
+                    <span id="usernameError" class="text-danger field-validation-valid" data-valmsg-for="vchUserName" data-valmsg-replace="true"></span>
+                    <a class="usershowbtn">
+                        <img src="/Login/images/user.png" />
+                    </a>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control password " id="textPassword" placeholder="Password" maxlength="20" data-val="true" data-val-regex="Enter valid password." data-val-regex-pattern="^[a-zA-Z0-9@#]{1,20}$" data-val-required="Please enter password" name="vchPassword" />
+                    <span id="passwordError" class="text-danger field-validation-valid" data-valmsg-for="vchPassword" data-valmsg-replace="true"></span>
+                    <a class="passwordshowbtn">
+                        <img src="/Login/images/hide.png" />
+                        <img src="/Login/images/view.png" alt="view" style="display:none" />
+                    </a>
+                </div>
+                <div class="text-right mt-1 mb-4">
+                </div>
+                <div class="input-group">
+                    <table>
+                        <tr>
+                            <td><img id="img-captcha" src="/get-captcha-image" /></td>
+                            <td> <input type="text" class="form-control" placeholder="Captcha Code" maxlength="4" data-val="true" data-val-length="The field CaptchaCode must be a string with a maximum length of 4." data-val-length-max="4" data-val-required="The CaptchaCode field is required." id="CaptchaCode" name="CaptchaCode" value="" /></td>
+                        </tr>
+                    </table>
+                    <span class="text-danger field-validation-valid" data-valmsg-for="CaptchaCode" data-valmsg-replace="true"></span>
+                </div>
+                <br />
+
+                <div class="text-right">
+                    <button ID="LoginButton" runat="server" style="background-color: #00ced1; color: white; font-weight: bold; border: 2px #808080 " class="log-link mb-3"
+                            Text="SIGN IN" ValidationGroup="Login1">
+                        Login
+                    </button>
+                </div>
+                <!--<p class="text-center">Do not have an account ? <a class="" href="register.html">Sign Up</a></p>-->
+            </div>
+        </div>
+    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AyW0j3NLrhIiyn6T40AbGgL2_hIolugyqfcjN69DykKxpNH3rHeSzOQUBmgLhgrV3fFptNMXx2j_r0ScMQjH0BuiBvZxk5D3dQ5aRa94VmvzgoO8v6xZ8qyJNZyPrrobE9JbujWVL5YRrwbM9yfUIM" /></form>
+    <script src="/js/login.js"></script>
+    <script src="/js/ViewJS/disableInspectElement.js"></script>
+</body>
+</html>
+
+
+
+
