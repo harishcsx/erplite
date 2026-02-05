@@ -1,7 +1,13 @@
 const { CookieJar } = require('tough-cookie');
-const { wrapper } = require('axios-cookiejar-support');
 const axios = require('axios');
 const crypto = require('crypto');
+let wrapper;
+
+// Dynamic import for ES Module
+(async () => {
+    const module = await import('axios-cookiejar-support');
+    wrapper = module.wrapper;
+})();
 
 class SessionManager {
     constructor() {
